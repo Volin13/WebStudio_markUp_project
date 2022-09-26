@@ -41,7 +41,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="nav">
+        <ul class="auth">
           <li class="header__auth">
             <a class="auth__link" href="mailto:info@devstudio.com">
               <svg width="16" height="12" class="icon icon-position">
@@ -59,6 +59,10 @@
             >
           </li>
         </ul>
+
+        <button class="header-burger" type="button"> <svg width="24" height="16">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg></button>
       </div>
     </header>
     <!-- main -->
@@ -70,56 +74,6 @@
           <button data-modal-open type="button" class="button">Замовити послугу</button>
         </div>
       </section>
-
-      <!-- modal -->
-
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button data-modal-close type="button" class="modal__cross">
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-croses"></use>
-            </svg>
-          </button>
-          <span class="modal__title">Залиште свої дані, ми вам передзвонимо</span>
-          <form class="modal__position">
-           <div class="input">
-            <lable for="user" class="input__lable"> Ім'я </label>
-            <input type="text" name="user" id="user" placeholder=" " class="form">
-            <svg class="form__icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-user"></use>
-            </svg>
-            </div>
-           
-           <div class="input">
-            <lable for="phone" class="input__lable"> Телефон </label>
-            <input type="tel" name="phone" id="phone" placeholder=" " class="form">
-            <svg class="form__icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            </div>
-           
-           <div class="input">
-            <label for="e-mail" class="input__lable"> Пошта </label>
-            <input type="email" name="e-mail" id="e-mail" placeholder=" " class="form">
-            <svg class="form__icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-            </div>
-            <label for="message">Коментар</label>
-            <textarea class="form__textarea" name="user_message" id="message" rows="5" placeholder="Введіть текст"></textarea>
-                <label class="checkbox__position" name="agree">
-                  <input type="checkbox" name="agree" class="input__checkbox visually-hidden"> 
-                  <div class="checkbox">
-                    <svg width="16" height="15">
-                      <use href="./images/icons.svg#icon-check-icon"></use>
-                    </svg>
-                  </div>
-                  Погоджуюсь з розсилкою та приймаю <a href="#" class="modal__anchor">Умови договору</a></label>
-          </form>
-          <button type="submit" class="button button-modal">Відправити</button>
-
-        </div>
-      </div>
 
       <!-- benefits -->
       <section>
@@ -189,7 +143,7 @@
         </div>
       </section>
       <!-- our occupations -->
-      <section class="section">
+      <section class="section occupations-wrap">
         <div class="container">
           <h2 class="section__title">
             Чим ми займаємося
@@ -198,7 +152,8 @@
             <li>
               <div class="occupations-thumb">
                 <img
-                src="./images/box-backend.jpg"
+                srcset="./images/desctop-app-min.jpg 1x, ./images/desctop-app@2x-min.jpg 2x"
+                src="./images/desctop-app-min.jpg"
                 alt="людина набирає код"
                 width="370"
                 height="294"
@@ -211,7 +166,8 @@
             <li>
               <div class="occupations-thumb">
               <img
-                src="./images/box-structure.jpg"
+              srcset="./images/mobile-app-min.jpg 1x, ./images/mobile-app@2x-min.jpg 2x"
+              src="./images/mobile-app-min.jpg"
                 alt="жінка тримає телефон"
                 width="370"
                 height="294"
@@ -224,7 +180,8 @@
             <li>
               <div class="occupations-thumb">
               <img
-                src="./images/box-design.jpg"
+              srcset="./images/designer-desisions-min.jpg 1x, ./images/designer-desisions@2x-min.jpg 2x"
+              src="./images/designer-desisions-min.jpg"
                 alt="людина обирає колір на планшеті"
                 width="370"
                 height="294"
@@ -244,13 +201,25 @@
           <ul class="team__list">
             <li class="team__position">
               <div class="team__box">
+                <picture>
+                  <source
+                  srcset="./images/igor-min.jpg 1x, 
+                  ./images/igor@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/igor-min.jpg 1x, 
+                  ./images/tablet/igor@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/igor-min.jpg 1x, 
+                  ./images/mobile/igor@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
                 <img
-                  src="./images/img-igor.jpg"
+                  src="./images/igor-min.jpg"
                   alt="Ігор Дем'яненко"
                   width="270"
                   height="260"
                   class="team__position-main"
                 />
+              </picture>
                 <h3 class="mates-name team__position-scnd">Ігор Дем'яненко</h3>
                 <p class="mates-position" lang="en">Product Designer</p>
                 <ul class="team__icons">
@@ -291,13 +260,25 @@
 
             <li class="team__position">
               <div class="team__box">
+                <picture>
+                  <source
+                  srcset="./images/olga-min.jpg 1x, 
+                  ./images/olga@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/olga-min.jpg 1x, 
+                  ./images/tablet/olga@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/olga-min.jpg 1x, 
+                  ./images/mobile/olga@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
                 <img
-                  src="./images/img-olga.jpg"
+                  src="./images/olga-min.jpg"
                   alt="Ольга Рєпіна"
                   width="270"
                   height="260"
                   class="team__position-main"
                 />
+              </picture>
                 <h3 class="mates-name team__position-scnd">Ольга Рєпіна</h3>
                 <p class="mates-position" lang="en">Frontend Developer</p>
                 <ul class="team__icons">
@@ -338,13 +319,25 @@
 
             <li class="team__position">
               <div class="team__box">
+                <picture>
+                  <source
+                  srcset="./images/mykola-min.jpg 1x, 
+                  ./images/mykola@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/mykola-min.jpg 1x, 
+                  ./images/tablet/mykola@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/mykola-min.jpg 1x, 
+                  ./images/mobile/mykola@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
                 <img
-                  src="./images/img-mykola.jpg"
+                  src="./images/mykola-min.jpg"
                   alt="Микола Тарасов"
                   width="270"
                   height="260"
                   class="team__position-main"
                 />
+              </picture>
                 <h3 class="mates-name team__position-scnd">Микола Тарасов</h3>
                 <p class="mates-position" lang="en">Product Designer</p>
                 <ul class="team__icons">
@@ -385,13 +378,25 @@
 
             <li class="team__position">
               <div class="team__box">
+                <picture>
+                  <source
+                  srcset="./images/mykhailo-min.jpg 1x, 
+                  ./images/mykhailo@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/mykhailo-min.jpg 1x, 
+                  ./images/tablet/mykhailo@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/mykhailo-min.jpg 1x, 
+                  ./images/mobile/mykhailo@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
                 <img
-                  src="./images/img-mykhailo.jpg"
+                  src="./images/mykhailo-min.jpg"
                   alt="Михайло Єрмаков"
                   width="270"
                   height="260"
                   class="team__position-main"
                 />
+              </picture>
                 <h3 class="mates-name team__position-scnd">Михайло Єрмаков</h3>
                 <p class="mates-position" lang="en">Product Designer</p>
                 <ul class="team__icons">
@@ -565,6 +570,57 @@
         </div>
       </div>
     </footer>
+      <!-- modal -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button data-modal-close type="button" class="modal__cross">
+            <svg width="18" height="18">
+              <use href="./images/icons.svg#icon-croses"></use>
+            </svg>
+          </button>
+          <span class="modal__title">Залиште свої дані, ми вам передзвонимо</span>
+          <form class="modal__position">
+           <div class="input">
+            <lable for="user" class="input__lable"> Ім'я </label>
+            <input type="text" name="user" id="user" placeholder=" " class="form">
+            <svg class="form__icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-user"></use>
+            </svg>
+            </div>
+           
+           <div class="input">
+            <lable for="phone" class="input__lable"> Телефон </label>
+            <input type="tel" name="phone" id="phone" placeholder=" " class="form">
+            <svg class="form__icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            </div>
+           
+           <div class="input">
+            <label for="e-mail" class="input__lable"> Пошта </label>
+            <input type="email" name="e-mail" id="e-mail" placeholder=" " class="form">
+            <svg class="form__icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+            </div>
+            <label for="message">Коментар</label>
+            <textarea class="form__textarea" name="user_message" id="message" rows="5" placeholder="Введіть текст"></textarea>
+                <label class="checkbox__position" name="agree">
+                  <input type="checkbox" name="agree" class="input__checkbox visually-hidden"> 
+                  <div class="checkbox">
+                    <svg width="16" height="15">
+                      <use href="./images/icons.svg#icon-check-icon"></use>
+                    </svg>
+                  </div>
+                  Погоджуюсь з розсилкою та приймаю <a href="#" class="modal__anchor">Умови договору</a></label>
+          </form>
+          <button type="submit" class="button button-modal">Відправити</button>
+
+        </div>
+      </div>
     <script src="./js/modal.js"></script>
 </body>
+
+
 </html>

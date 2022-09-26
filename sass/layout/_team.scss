@@ -22,12 +22,31 @@
       background-color: var(--primary-white-color);
       padding-bottom: 30px;
     }
-    &__position:not(:last-child) {
-      margin-right: 30px;
+    &__position:not(:nth-child(4)){
+      margin-bottom: 30px;
     }
+
+
+
     &__list{
-      @include common-flex;
+      display: flex;
+      flex-direction: column;
     }
+
+    @media screen and(min-width:768px){
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and(min-width:1200px){
+      &__list{
+        @include common-flex;
+      }
+      &__position:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
   }
 
   .icons__circle {
@@ -61,3 +80,4 @@
     line-height: 1.19;
     text-align: center;
   }
+

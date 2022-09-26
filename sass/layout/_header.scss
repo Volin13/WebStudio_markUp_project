@@ -1,24 +1,46 @@
 .header{
   @include common-flex;
-
+  height: 60px;
   &__position{
     @include common-position;
   }
   &__line {
     border-bottom: 1px solid var(--headre-border-color);
   }
-  &__auth:not(:first-of-type) {
-    margin-left: 50px;
-  }  
+
   &__auth:hover,
   &__auth:focus{
     color: var(--accent-color);
     fill: var(--accent-color);
   }
+
+  @media screen and(min-width:768px) {
+    @include common-flex;
+    height: 80px;
+    &__auth:first-child{
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    &__auth:not(:first-of-type) {
+      margin-left: 50px;
+      height: auto;
+    }  
+    &__auth:first-child{
+      margin-bottom: 0;
+    }
+
+  }
 }
 
 .nav{
-  @include common-flex;
+  display: none;
+  @media screen and(min-width:768px) {
+    @include common-flex;
+    height: auto;
+  }
+
 
   &__li:not(:last-of-type) {
     margin-right: 50px;
@@ -30,6 +52,7 @@
   }
   &__li {
     position: relative;
+    
   }
   &__link{
     @include common-flex;
@@ -48,43 +71,62 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
-.auth__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  color: var(--primary-text-color);
-  @include common-flex;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus{
-    color: var(--accent-color);
-    fill: var(--accent-color);
+.auth{
+  display: none;
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    display: flex;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus{
+      color: var(--accent-color);
+      fill: var(--accent-color);
+    }
   }
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    padding: 0;
+  }
+  @media screen and(min-width:1200px) {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  
 }
 
-.icon {
-  fill: currentColor;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:focus,
-  &:hover{
-    color: var(--accent-color);
-    fill: var(--accent-color);
+  
+
+ 
+  
+  .icon {
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:focus,
+    &:hover{
+      color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+    &-position{
+      margin-right: 10px;
+    }
   }
-  &-position{
-    margin-right: 10px;
-  }
-}
+
+
 
 
 .current{

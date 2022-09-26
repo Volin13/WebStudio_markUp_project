@@ -1,12 +1,14 @@
 .benefits {
-    padding-top: 94px;
+
+  display: flex;
+  flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
     
-    &__list:not(:last-of-type) {
-      margin-right: 30px;
-    }
     &-wrap {
-      width: 270px;
+      width: 450px;
     }
+
     &__title {
       color: var(--title-text-color);
       font-weight: 700;
@@ -14,13 +16,65 @@
       line-height: 1.14;
       text-transform: uppercase;
       margin-bottom: 10px;
+      text-align: center;
     }
     &__icon {
       display: flex;
       background-color: var(--background-color-light);
       align-items: center;
-      padding: 25px 100px;
+      padding: 25px 190px;
       margin-bottom: 30px;
     }
-    @include common-flex;
+    &__list{
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width:768px){
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      &-wrap {
+        width: 354px;
+        display: inline-block;
+      }
+      &__icon {
+        display: flex;
+        align-items: center;
+        padding: 25px 142px;
+      }
+      &__list{
+        margin-right: 30px;
+        margin-bottom: 30px;
+      }
+
+      .benefits__list:nth-child(2n) {
+        margin-right: 0;
+      }
+      
+      .benefits__list:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and(min-width:1200px){
+      justify-content: space-between;
+      flex-direction: row;
+      justify-content: baseline;
+      padding-top: 94px;
+      padding-bottom: 0;
+
+      &-wrap {
+        width: 270px;
+      }
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 100px;
+      }
+      &__list{
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
   }
