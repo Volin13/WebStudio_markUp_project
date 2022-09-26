@@ -21,23 +21,41 @@
       border-radius: 0px 0px 4px 4px;
       background-color: var(--primary-white-color);
       padding-bottom: 30px;
+      max-width: 450px;
     }
     &__position:not(:nth-child(4)){
       margin-bottom: 30px;
     }
-
-
-
     &__list{
       display: flex;
       flex-direction: column;
     }
 
     @media screen and(min-width:768px){
-      display: flex;
-      flex-wrap: wrap;
-    }
+      &__list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
 
+      &__box{
+        max-width: 354px;
+      }
+
+      // &__position{
+      //   margin-right: 30px;
+      //   margin-bottom: 30px;
+      // }
+  
+      .team__list:nth-child(2n) {
+        margin-right: 0;
+      }
+      
+      .team__list:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+    
     @media screen and(min-width:1200px){
       &__list{
         @include common-flex;

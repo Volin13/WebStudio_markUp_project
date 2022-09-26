@@ -712,7 +712,7 @@ address {
   padding: 25px 190px;
   margin-bottom: 30px;
 }
-.benefits__list {
+.benefits__position {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -740,14 +740,14 @@ address {
             align-items: center;
     padding: 25px 142px;
   }
-  .benefits__list {
+  .benefits__position {
     margin-right: 30px;
     margin-bottom: 30px;
   }
-  .benefits .benefits__list:nth-child(2n) {
+  .benefits__position:nth-child(2n) {
     margin-right: 0;
   }
-  .benefits .benefits__list:nth-last-child(-n+2) {
+  .benefits__position:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
 }
@@ -864,6 +864,7 @@ address {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-white-color);
   padding-bottom: 30px;
+  max-width: 450px;
 }
 .team__position:not(:nth-child(4)) {
   margin-bottom: 30px;
@@ -878,12 +879,25 @@ address {
           flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .team {
+  .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .team__box {
+    max-width: 354px;
+  }
+  .team .team__list:nth-child(2n) {
+    margin-right: 0;
+  }
+  .team .team__list:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {

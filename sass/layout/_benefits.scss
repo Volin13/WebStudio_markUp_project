@@ -25,7 +25,7 @@
       padding: 25px 190px;
       margin-bottom: 30px;
     }
-    &__list{
+    &__position{
       margin-bottom: 30px;
     }
 
@@ -42,16 +42,16 @@
         align-items: center;
         padding: 25px 142px;
       }
-      &__list{
+      &__position{
         margin-right: 30px;
         margin-bottom: 30px;
       }
 
-      .benefits__list:nth-child(2n) {
+      &__position:nth-child(2n) {
         margin-right: 0;
       }
       
-      .benefits__list:nth-last-child(-n + 2) {
+      &__position:nth-last-child(-n + 2) {
         margin-bottom: 0;
       }
     }
