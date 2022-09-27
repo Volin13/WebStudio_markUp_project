@@ -23,8 +23,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 52px;
-        margin-left: 12px;
+        margin-top: 20px;
+
+        // @media screen and(min-width:768px) {
+        //   &-footer{
+        //     display: inline-block;
+        //     margin: 20px auto 0 auto;
+        //   }
+        // }
       }
 
       &-modal {
@@ -38,6 +44,13 @@
       &-footer:hover,
       &-footer:focus {
         background-color: var(--active-button-color);
+      }
+
+      @media screen and(min-width:1200px) {
+        &-footer{
+          margin-top: 52px;
+          margin-left: 12px;
+        }
       }
   }
 
