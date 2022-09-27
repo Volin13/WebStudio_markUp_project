@@ -40,7 +40,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="nav">
+        <ul class="auth">
           <li class="header__auth">
             <a class="auth__link" href="mailto:info@devstudio.com">
               <svg width="16" height="12" class="icon icon-position">
@@ -58,6 +58,10 @@
             >
           </li>
         </ul>
+
+        <button class="header-burger" type="button"> <svg width="24" height="16">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg></button>
       </div>
     </header>
     <!-- main -->
@@ -66,17 +70,30 @@
         <div class="container">
           <h1 class="visually-hidden">Приклади робіт</h1>
           <ul class="filter">
-            <li><button type="button" class="filter__button">Усі</button></li>
-            <li><button type="button" class="filter__button">Веб-сайти</button></li>
-            <li><button type="button" class="filter__button">Додатки</button></li>
-            <li><button type="button" class="filter__button">Дизайн</button></li>
-            <li><button type="button" class="filter__button">Маркетинг</button></li>
+            <li class="filter__link"><button type="button" class="filter__button">Усі</button></li>
+            <li class="filter__link"><button type="button" class="filter__button">Веб-сайти</button></li>
+            <li class="filter__link"><button type="button" class="filter__button">Додатки</button></li>
+            <li class="filter__link"><button type="button" class="filter__button">Дизайн</button></li>
+            <li class="filter__link"><button type="button" class="filter__button">Маркетинг</button></li>
           </ul>
           <ul class="projects-flex">
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-                <img src="./images/tehnocryak.jpg" alt="McBook Pro screen" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/technokhryak.jpg 1x, 
+                  ./images/technokhryak@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/technokhryak-min.jpg 1x, 
+                  ./images/tablet/technokhryak@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/technokhryak-min.jpg 1x, 
+                  ./images/mobile/technokhryak@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+                <img src="./images/technokhryak.jpg" alt="McBook Pro screen"
+                 width="370" height="294" />
+                </picture>
                 <div class="portf-overlay">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -84,19 +101,31 @@
               </div>
               <div class="projects__box">
                 <h2 class="projects__title projects__title-position">Технокряк</h2>
-                <p class="projects__description">Веб-сайт</p>
+                <p class="projects__description projects__media">Веб-сайт</p>
               </div>
             </a>
             </li>
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
+                <picture>
+                  <source
+                  srcset="./images/new-orlean.jpg 1x, 
+                  ./images/new-orlean@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/new-orlean-min.jpg 1x, 
+                  ./images/tablet/new-orlean@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/new-orlean-min.jpg 1x, 
+                  ./images/mobile/new-orlean@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
               <img
-                src="./images/poster.jpg"
+                src="./images/new-orlean.jpg"
                 alt="two bascketball players"
                 width="370"
                 height="294"
               />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -113,7 +142,20 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-              <img src="./images/seafood.jpg" alt="resturant logo" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/seafood.jpg 1x, 
+                  ./images/seafood@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/seafood-min.jpg 1x, 
+                  ./images/tablet/seafood@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/seafood-min.jpg 1x, 
+                  ./images/mobile/seafood@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+              <img src="./images/seafood.jpg" alt="resturant logo" 
+              width="370" height="294" />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -128,7 +170,20 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-              <img src="./images/projectprime.jpg" alt="headphones" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/prime.jpg 1x, 
+                  ./images/prime@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/prime-min.jpg 1x, 
+                  ./images/tablet/prime@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/prime-min.jpg 1x, 
+                  ./images/mobile/prime@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+              <img src="./images/prime.jpg" alt="headphones" 
+              width="370" height="294" />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -143,7 +198,20 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-              <img src="./images/boxes.jpg" alt="two boxes" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/boxes.jpg 1x, 
+                  ./images/boxes@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/boxes-min.jpg 1x, 
+                  ./images/tablet/boxes@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/boxes-min.jpg 1x, 
+                  ./images/mobile/boxes@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+              <img src="./images/boxes.jpg" alt="two boxes" 
+              width="370" height="294" />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -158,12 +226,24 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
+                <picture>
+                  <source
+                  srcset="./images/insparation.jpg 1x, 
+                  ./images/insparation@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/insparation-min.jpg 1x, 
+                  ./images/tablet/insparation@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/insparation-min.jpg 1x, 
+                  ./images/mobile/insparation@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
               <img
-                src="./images/insparationnoborders.jpg"
+                src="./images/insparation.jpg"
                 alt="computer screen"
                 width="370"
                 height="294"
               />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -178,7 +258,20 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-              <img src="./images/limitededition.jpg" alt="book" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/limited-edition.jpg 1x, 
+                  ./images/limited-edition@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/limited-edition-min.jpg 1x, 
+                  ./images/tablet/limited-edition@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/limited-edition-min.jpg 1x, 
+                  ./images/mobile/limited-edition@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+              <img src="./images/limited-edition.jpg" alt="book" 
+              width="370" height="294" />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -193,7 +286,20 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
-              <img src="./images/projectlab.jpg" alt="product lable" width="370" height="294" />
+                <picture>
+                  <source
+                  srcset="./images/lab.jpg 1x, 
+                  ./images/lab@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/lab-min.jpg 1x, 
+                  ./images/tablet/lab@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/lab-min.jpg 1x, 
+                  ./images/mobile/lab@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
+              <img src="./images/lab.jpg" alt="product lable"
+               width="370" height="294" />
+              </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -208,12 +314,24 @@
             <li class="projects projects-position">
               <a class="projects__link" href="#">
               <div class="thumb">
+                <picture>
+                  <source
+                  srcset="./images/business.jpg 1x, 
+                  ./images/business@2x-min.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/tablet/business-min.jpg 1x, 
+                  ./images/tablet/business@2x-min.jpg 2x" 
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/mobile/business-min.jpg 1x, 
+                  ./images/mobile/business@2x-min.jpg 2x"
+                   media="(max-width:767px)"/>
               <img
-                src="./images/growbusiness.jpg"
+                src="./images/business.jpg"
                 alt="man typing using the notebook"
                 width="370"
                 height="294"
               />
+            </picture>
               <div class="portf-overlay">
                 <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -232,6 +350,7 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container footer-flex">
+      <div class="footer-media">
         <div class="address__box">
           <a class="logo footer__logo" lang="en" href="./index.html"
             >Web<span class="footer__logo--colored">Studio</span>
@@ -261,7 +380,7 @@
           </address>
         </div>
         <div class="social">
-          <h3 class="social__tittle">Приєднуйтесь</h3>
+          <h3 class="social__tittle social__tittle-position">Приєднуйтесь</h3>
           <ul class="social__list">
             <li>
               <a href="https://www.instagram.com/" class="list__wrap">
@@ -295,20 +414,19 @@
               </a>
             </li>
           </ul>
-
         </div>
+      </div>
         <div class="footer__form">
           <div class="form-position">
-            <h3 class="social__tittle social__tittle-position ">Підпишіться на розсилку</h3>
+            <h3 class="social__tittle social__tittle-position">Підпишіться на розсилку</h3>
             <form>
               <input class="footer__input" type="email" placeholder="E-mail">
             </form>
           </div>
-          <button type="submit" class="button button-footer">Підписатися<svg width="24" height="24" >
+          <button type="submit" class="button button-footer">Підписатися<svg width="24" height="24" class="footer__botton">
             <use href="./images/icons.svg#icon-send"></use>
           </svg></button>
         </div>
-
       </div>
     </footer>
   </body>
