@@ -1,9 +1,41 @@
-.header-burger{
+.burger{
     background-color: transparent;
     padding: 12px 8px;
+    position: absolute;
+    display: block;
+
+    z-index: 9;
+
+    top: 10px;
+    right: 15px;
+
+    margin: 0;
+    padding: 0;
+    fill: var(--primary-black-color);
     cursor: pointer;
-    fill: var(--title-text-color);
+
+    &:hover, &:focus {
+        fill: var(--accent-color);
+    }
+    
     @media screen and(min-width:768px) {
         display: none;
+    } 
+    &__icon {
+    
+    .burger.is-open & {
+        display: none;
+    }
+    }
+    
+    &__close {
+    
+        display: none;
+        
+        .burger.is-open & {
+            display: block;
+        }
     }
 }
+
+

@@ -30,10 +30,10 @@
           >
           <ul class="nav">
             <li class="nav__li">
-              <a class="nav__link" href="./index.html">Студія</a>
+              <a class="nav__link current" href="./index.html">Студія</a>
             </li>
             <li class="nav__li">
-              <a class="nav__link current" href="./portfolio.html">Портфоліо</a>
+              <a class="nav__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="nav__li">
               <a class="nav__link" href="#">Контакти</a>
@@ -59,10 +59,49 @@
           </li>
         </ul>
 
-        <button class="header-burger" type="button"> <svg width="24" height="16">
-          <use href="./images/icons.svg#icon-burger"></use>
-        </svg></button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="mobile" data-menu-button> 
+          <svg width="40" height="40">
+          <use  class="burger__icon" href="./images/icons.svg#icon-burger"></use>
+          <use  class="burger__close" href="./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
       </div>
+
+            <!-- mobile-modal -->
+            <div class="mobile" data-menu>
+              <nav class="mobile__menu">
+                <ul class="mobile__nav">
+                  <li class="mobile__li">
+                    <a class="mobile__link active" href="./index.html">Студія</a>
+                  </li>
+                  <li class="mobile__li">
+                    <a class="mobile__link" href="./portfolio.html">Портфоліо</a>
+                  </li>
+                  <li class="mobile__li">
+                    <a class="mobile__link" href="#">Контакти</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="mobile__auth">
+                <li class="mobile__contacts">
+                  <a class="contacts__link contacts__link--colored" href="tel:+380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile__contacts">
+                  <a class="contacts__link " href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="social__list">
+                <li class="social__link"> <a href="#"></a>Instagram</li>
+                <li class="social__link"> <a href="#"></a>Twitter</li>
+                <li class="social__link"> <a href="#"></a>Facebook</li>
+                <li class="social__link"> <a href="#"></a>LinkedIn</li>
+              </ul>
+            </div>
     </header>
     <!-- main -->
     <main>
