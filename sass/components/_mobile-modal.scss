@@ -43,8 +43,11 @@
 }
 
 
-.social__list{
+.social__lists{
     display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
 }
 
 .social__link{
