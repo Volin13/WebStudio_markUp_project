@@ -273,7 +273,7 @@ button {
             flex-direction: column;
   }
   .mobile__nav {
-    margin-bottom: 302px;
+    margin-bottom: 35vh;
   }
   .mobile__auth {
     margin-bottom: 64px;
@@ -309,6 +309,11 @@ button {
   color: var(--accent-color);
   padding: 0 10px;
 }
+@media screen and (max-width: 479px) {
+  .social__link {
+    margin-bottom: 5px;
+  }
+}
 
 .social__link:not(:last-of-type) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -323,6 +328,11 @@ button {
   color: var(--accent-color);
   font-size: 40px;
   line-height: 1.18;
+}
+@media screen and (max-width: 479px) {
+  .contacts__link {
+    font-size: 26px;
+  }
 }
 
 .active {
