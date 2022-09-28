@@ -825,7 +825,7 @@ address {
   padding-bottom: 60px;
 }
 .benefits-wrap {
-  width: 450px;
+  width: 450;
 }
 .benefits__title {
   color: var(--title-text-color);
@@ -844,11 +844,22 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25px 190px;
   margin-bottom: 30px;
 }
 .benefits__position {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 479px) {
+  .benefits__wrap {
+    width: 290px;
+  }
+  .benefits__icon {
+    padding: 25px 110px;
+  }
 }
 @media screen and (max-width: 767px) {
   .benefits__list:not(:last-child) {
