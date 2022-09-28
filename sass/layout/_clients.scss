@@ -16,6 +16,16 @@
     @include border-transition;
     @include fill-transition;
   }
+
+@media screen and(max-width:479px) {
+  flex-direction: column;
+
+  &__list:not(:last-of-type){
+    margin-bottom: 30px;
+  }
+}
+
+
 @media screen and(max-width:767px) {
   
   &__list{
