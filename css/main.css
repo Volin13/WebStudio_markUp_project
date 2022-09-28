@@ -196,7 +196,7 @@ button {
 .burger {
   background-color: transparent;
   padding: 12px 8px;
-  position: fixed;
+  position: absolute;
   display: block;
   z-index: 9;
   top: 10px;
@@ -242,6 +242,19 @@ button {
 .mobile {
   overflow-y: scroll;
 }
+.mobile-flex {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 @media screen and (max-width: 767px) {
   .mobile {
     display: none;
@@ -272,9 +285,6 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .mobile__nav {
-    margin-bottom: 35vh;
-  }
   .mobile__auth {
     margin-bottom: 64px;
   }
@@ -282,12 +292,7 @@ button {
     margin-bottom: 32px;
   }
   .mobile.is-open {
-    display: block;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 479px) {
-  .mobile__nav {
-    margin-bottom: 20vh;
+    display: inline-block;
   }
 }
 @media screen and (min-width: 768px) {
