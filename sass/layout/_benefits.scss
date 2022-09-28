@@ -31,7 +31,7 @@
     }
     @media screen and(max-width:479px){
       &__wrap{
-        width: 290px;
+        min-width: 290px;
       }
       &__icon {
         padding: 25px 110px;

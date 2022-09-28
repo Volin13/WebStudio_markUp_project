@@ -855,7 +855,7 @@ address {
 }
 @media screen and (max-width: 479px) {
   .benefits__wrap {
-    width: 290px;
+    min-width: 290px;
   }
   .benefits__icon {
     padding: 25px 110px;
